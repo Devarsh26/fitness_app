@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/background_style"
+    tools:context="com.vladnamik.developer.activities.DishActivity">
+
+    <RelativeLayout
+        style="@style/header_style"
+        android:layout_height="130dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="108dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="140dp"
+            android:layout_marginRight="140dp"
+            android:layout_marginBottom="21dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            style="@style/header_text"
+            android:layout_width="95dp"
+            android:layout_height="37dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="290dp"
+            android:layout_marginRight="290dp"
+            android:layout_marginBottom="44dp"
+            android:text="@string/dishes"
+            android:textStyle="bold"></TextView>
+
+        <Button
+            android:id="@+id/from_dishes_to_menu"
+            style="@style/header_button"
+            android:layout_width="107dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="263dp"
+            android:layout_marginLeft="263dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="44dp"
+            android:text="Menu"></Button>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/my_db_menu_color"
+        android:id="@+id/db_dish_menu">
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/db_dish_add"
+            android:onClick="onCreateDish"
+            android:src="@drawable/add_item"
+            android:contentDescription="@string/create" />
+
+        <ImageButton
+            android:id="@+id/db_dish_delete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@null"
+            android:contentDescription="@string/delete"
+            android:onClick="onDeleteDish"
+            android:scaleType="centerInside"
+            android:src="@drawable/delete_item" />
+
+        <ImageButton
+            android:id="@+id/db_dish_edit"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toStartOf="@id/db_dish_delete"
+            android:layout_toLeftOf="@id/db_dish_delete"
+            android:background="@null"
+            android:contentDescription="@string/edit"
+            android:onClick="onEditDish"
+            android:scaleType="centerInside"
+            android:src="@drawable/edit" />
+    </RelativeLayout>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="#242424"
+        android:dividerHeight="1dp"
+        android:id="@+id/dish_list_view"/>
+</LinearLayout>

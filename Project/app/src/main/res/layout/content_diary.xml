@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/background_style"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.DiaryActivity"
+    tools:showIn="@layout/activity_diary"
+    >
+
+    <RelativeLayout
+        style="@style/header_style"
+        android:layout_height="130dp">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="108dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="140dp"
+            android:layout_marginRight="140dp"
+            android:layout_marginBottom="21dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            style="@style/header_text"
+            android:layout_width="60dp"
+            android:layout_height="37dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="275dp"
+            android:layout_marginRight="275dp"
+            android:layout_marginBottom="44dp"
+            android:text="@string/diary"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/from_diary_to_menu"
+            style="@style/header_button"
+            android:layout_width="101dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="263dp"
+            android:layout_marginLeft="263dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="45dp"
+            android:text="Menu"></Button> />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="16dp">
+
+        <ImageButton
+            android:id="@+id/diary_left_arrow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/previous_day"
+            android:scaleType="centerInside"
+            android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:id="@+id/diary_weekday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/my_text_color"
+            android:textSize="20sp"
+            tools:text="Friday" />
+
+        <EditText
+            android:id="@+id/diary_set_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/diary_weekday"
+            android:layout_centerHorizontal="true"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:textColor="@color/my_text_color"
+            tools:text="25.12.2015" />
+
+        <ImageButton
+            android:id="@+id/diary_right_arrow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/next_day"
+            android:scaleType="centerInside"
+            android:src="@drawable/right_arrow" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="282dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="10dp">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/diary_table"
+                        android:text="@string/got" />
+
+                    <TextView
+                        style="@style/diary_table"
+                        android:text="@string/spent" />
+
+                    <TextView
+                        style="@style/diary_table"
+                        android:text="@string/gap" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/diary_calorie_get"
+                        style="@style/diary_table"
+                        android:gravity="center"
+                        tools:text="875 kcal" />
+
+                    <TextView
+                        android:id="@+id/diary_calorie_spend"
+                        style="@style/diary_table"
+                        android:gravity="center"
+                        tools:text="875 kcal" />
+
+                    <TextView
+                        android:id="@+id/diary_calorie_need"
+                        style="@style/diary_table"
+                        android:gravity="center"
+                        tools:text="875 kcal" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="30dp">
+
+                <ImageButton
+                    android:id="@+id/diary_dish_add_button"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@null"
+                    android:contentDescription="@string/add_dish"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/add_dish" />
+
+                <ImageButton
+                    android:id="@+id/diary_exercise_add_button"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@null"
+                    android:contentDescription="@string/add_exercise"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/add_exercise" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/diary_dishes_view_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/my_header_color"
+                    android:onClick="onViewDayDishes"
+                    android:text="@string/food"
+                    android:textAllCaps="false"
+                    android:textColor="@color/my_text_color" />
+
+                <Button
+                    android:id="@+id/diary_exercises_view_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/my_header_color"
+                    android:onClick="onViewDayExercises"
+                    android:text="@string/exercises"
+                    android:textAllCaps="false"
+                    android:textColor="@color/my_text_color" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="@string/notes"
+        android:textColor="@color/my_text_color"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/diary_record"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:hint="@string/your_notes"
+        android:textColor="@color/my_text_color"
+        android:textColorHint="@color/my_text_color"
+        android:textSize="14sp" />
+</LinearLayout>

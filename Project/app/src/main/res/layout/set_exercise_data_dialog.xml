@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionGroup="false"
+    android:focusable="false">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="328dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="21dp"
+        app:srcCompat="@drawable/logo" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="350dp"
+        android:id="@+id/set_exercise_data_dialog_center"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/set_exercise_data_dialog_sek_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginRight="10dp"
+        android:layout_toStartOf="@id/set_exercise_data_dialog_center"
+        android:layout_toLeftOf="@id/set_exercise_data_dialog_center"
+        android:orientation="vertical">
+
+        <NumberPicker
+            android:id="@+id/set_exercise_data_dialog_set_sek"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/set_exercise_data_dialog_sek_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/seconds"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/set_exercise_data_dialog_minute_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="350dp"
+        android:layout_toStartOf="@id/set_exercise_data_dialog_sek_layout"
+        android:layout_toLeftOf="@id/set_exercise_data_dialog_sek_layout"
+        android:orientation="vertical">
+
+        <NumberPicker
+            android:id="@+id/set_exercise_data_dialog_set_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/set_exercise_data_dialog_minute_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/minutes"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/set_exercise_data_dialog_quantity_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="350dp"
+        android:layout_toEndOf="@id/set_exercise_data_dialog_center"
+        android:layout_toRightOf="@id/set_exercise_data_dialog_center"
+        android:orientation="vertical">
+
+        <NumberPicker
+            android:id="@+id/set_exercise_data_dialog_set_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/set_exercise_data_dialog_quantity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/times"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/set_exercise_data_dialog_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/set_exercise_data_dialog_center"
+        android:layout_marginStart="59dp"
+        android:layout_marginLeft="59dp"
+        android:layout_marginTop="200dp"
+        android:layout_toEndOf="@+id/set_exercise_data_dialog_center"
+        android:layout_toRightOf="@+id/set_exercise_data_dialog_center"
+        android:text="@string/cancel"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/set_exercise_data_dialog_OK_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/set_exercise_data_dialog_cancel_button"
+        android:layout_alignBottom="@+id/set_exercise_data_dialog_cancel_button"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="123dp"
+        android:layout_toStartOf="@+id/set_exercise_data_dialog_center"
+        android:layout_toLeftOf="@+id/set_exercise_data_dialog_center"
+        android:text="@string/set"
+        android:textAllCaps="false" />
+</RelativeLayout>
